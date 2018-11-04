@@ -1,9 +1,9 @@
-calcuBox{
-   
 
+h1 {
+  font-weight: 300;
+  margin: 0;
 }
-
-
+ 
 html {
 
    
@@ -17,3 +17,54 @@ html {
    background-attachment: fixed;
    color: #6cacc5;
  }
+
+ button {
+  font-size: 26px;
+}
+
+.num {
+  background-color: dimgray;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+ .ops{
+  background-color: dimgray;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: 4px 2px;
+  border-radius: 50%;
+
+
+ }
+ .equals{
+  background-color: dimgray;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: 4px 2px;
+  border-radius: 50%;
+
+
+ }
+ .calculator {
+  font-size: 28px;
+  margin: 0 auto;
+  width: 10em;
+  
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+  
+  &::after {
+    clear: both;
+  }
+}

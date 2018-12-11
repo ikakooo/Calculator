@@ -3,11 +3,11 @@
     /*--containers--*/
 #frame,
 #calculator { position: relative; display: block; width: 500px; }
-#frame { height: 244px; padding: 16px; background: rgb(44, 253, 2); border-radius: 8px; background: linear-gradient(#555, #000); }
+#frame { height: 244px; padding: 16px; background: rgb(44, 253, 2); border-radius: 8px; background: linear-gradient(rgb(22, 255, 1), #000); }
 #calculator { height: 400px; margin-top: 29px; }
     /*--the calculator view screen--*/
 #history { width: 100%; height: 16px; background: #333; color: #999; text-align: right; box-sizing: border-box; padding: 4px; font-size: 12px; }
-#view { width: 100%; height: 28px; background: rgb(44, 241, 5); color: rgb(47, 252, 6); text-align: right; font-size: 20px; box-sizing: border-box; padding: 4px; }
+#view { width: 100%; height: 28px; background: rgb(51, 51, 51); color: rgb(47, 252, 6); text-align: right; font-size: 20px; box-sizing: border-box; padding: 4px; }
     /*--HTML Calculator--*/
 #brand { position: absolute; top: 10px; left: 24px; color: red; font-size: 27px; font-style: italic; }
     /*--this is what determines 4 buttons per row--*/

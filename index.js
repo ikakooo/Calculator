@@ -26,16 +26,7 @@ Object.entries(
     let value = event.target.innerHTML;
     if (value == "." && current_number.indexOf(".") == -1)
       current_number.push(".");
-/*-- Digit was pressed -- but don't process,
-         it if digits cannot be used at this time *--/
-    if (can_use_digits) {
-      if (!isNaN(value) && value != "") {    
-        current_number.push(value);      
-        gid("view").innerHTML = array_to_number(current_number);
-        print_queue();
-        print_current();
-        /*-- At least one digit was entered,
-           we can use actions again --*/
+/
         can_use_actions = true;
       }
     }

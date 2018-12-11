@@ -1,70 +1,48 @@
-
-h1 {
-  font-weight: 300;
-  margin: 0;
+    /*--font for all elements--*/
+* { font-family: Arial, sans-serif; }
+    /*--containers--*/
+#frame,
+#calculator { position: relative; display: block; width: 500px; }
+#frame { height: 244px; padding: 16px; background: rgb(44, 253, 2); border-radius: 8px; background: linear-gradient(#555, #000); }
+#calculator { height: 400px; margin-top: 29px; }
+    /*--the calculator view screen--*/
+#history { width: 100%; height: 16px; background: #333; color: #999; text-align: right; box-sizing: border-box; padding: 4px; font-size: 12px; }
+#view { width: 100%; height: 28px; background: rgb(44, 241, 5); color: rgb(47, 252, 6); text-align: right; font-size: 20px; box-sizing: border-box; padding: 4px; }
+    /*--HTML Calculator--*/
+#brand { position: absolute; top: 10px; left: 24px; color: red; font-size: 27px; font-style: italic; }
+    /*--this is what determines 4 buttons per row--*/
+#buttons { display: grid;
+           grid-template-columns: auto auto auto auto }
+    /*--the rest of button styling--*/
+#buttons * { cursor: pointer; background: white; text-align: center; height: 32px; line-height: 32px; }
+#buttons * { border: 1px solid #aaa; border-right: unset; border-bottom: unset; }
+    /*--button style when mouse is over it--*/
+#buttons *:hover {
+    background: lime; color: #333; font-weight: bold; }
+#buttons * { background: linear-gradient(#fff, #bbb); }
+    /*--make sure text in buttons cannot be selected--*/
+#buttons * {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
- 
-html {
-
-   
-   background: #100a1c;
-   background-image:
-     radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+    /*--custom button colors--*/
+#reset { background: yellow; }
+#equals { background: blue; color: white; }
+    /*--the on switch in upper right corner--*/
+#on { position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; background: linear-gradient(lime, green); border-radius: 16px; border: 1px solid #000; }
 
 
-     
-     radial-gradient(60% 50% ellipse at center bottom, #7ad80e 0%, #f00c0c 100%);
-   background-attachment: fixed;
-   color: #6cacc5;
- }
-
- button {
-  font-size: 26px;
+body {
+ background-image: url("giphy.gif");
+ background-color: #cccccc;
 }
 
-.num {
-  background-color: dimgray;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  margin: 4px 2px;
-  border-radius: 50%;
-}
- .ops{
-  background-color: dimgray;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  margin: 4px 2px;
-  border-radius: 50%;
 
 
- }
- .equals{
-  background-color: dimgray;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  margin: 4px 2px;
-  border-radius: 50%;
 
 
- }
- .calculator {
-  font-size: 28px;
-  margin: 0 auto;
-  width: 10em;
-  
-  &::before,
-  &::after {
-    content: " ";
-    display: table;
-  }
-  
-  &::after {
-    clear: both;
-  }
-}

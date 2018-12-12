@@ -44,6 +44,7 @@ input:hover {background-color: #17e005}
 
 
 #display{
+  background-color: #00f708;
   padding: 15px;
   width: 620px;
   color: #FF0000;
@@ -51,12 +52,16 @@ input:hover {background-color: #17e005}
 }
 
 input:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  background-color: #317e005;
+  box-shadow: 0 5px rgb(3, 20, 247);
   transform: translateY(4px);
 }
 
+#clear{
+  background-color: #FF4500;
 
+
+}
 
 
 

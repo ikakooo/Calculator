@@ -1,6 +1,6 @@
 
 body {
- background-image: url("giphy.gif");
+ background-image: url("src/giphy.gif");
  background-color: #cccccc;
 }
 
@@ -67,8 +67,6 @@ input:active {
   background-color:#1E90FF
 
 }
-
-
 
 
 

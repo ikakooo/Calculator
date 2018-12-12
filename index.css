@@ -58,12 +58,15 @@ input:active {
 }
 
 #clear{
-  background-color: #FF4500;
+  background-color: #DC143C;
 
 
 }
 
+#operator{
+  background-color:#1E90FF
 
+}
 
 
 

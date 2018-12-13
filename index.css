@@ -1,48 +1,123 @@
-    /*--font for all elements--*/
-* { font-family: Arial, sans-serif; }
-    /*--containers--*/
-#frame,
-#calculator { position: relative; display: block; width: 500px; }
-#frame { height: 244px; padding: 16px; background: rgb(44, 253, 2); border-radius: 8px; background: linear-gradient(rgb(22, 255, 1), #000); }
-#calculator { height: 400px; margin-top: 29px; }
-    /*--the calculator view screen--*/
-#history { width: 100%; height: 16px; background: #333; color: #999; text-align: right; box-sizing: border-box; padding: 4px; font-size: 12px; }
-#view { width: 100%; height: 28px; background: rgb(51, 51, 51); color: rgb(47, 252, 6); text-align: right; font-size: 20px; box-sizing: border-box; padding: 4px; }
-    /*--HTML Calculator--*/
-#brand { position: absolute; top: 10px; left: 24px; color: red; font-size: 27px; font-style: italic; }
-    /*--this is what determines 4 buttons per row--*/
-#buttons { display: grid;
-           grid-template-columns: auto auto auto auto }
-    /*--the rest of button styling--*/
-#buttons * { cursor: pointer; background: white; text-align: center; height: 32px; line-height: 32px; }
-#buttons * { border: 1px solid #aaa; border-right: unset; border-bottom: unset; }
-    /*--button style when mouse is over it--*/
-#buttons *:hover {
-    background: lime; color: #333; font-weight: bold; }
-#buttons * { background: linear-gradient(#fff, #bbb); }
-    /*--make sure text in buttons cannot be selected--*/
-#buttons * {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
-    /*--custom button colors--*/
-#reset { background: yellow; }
-#equals { background: blue; color: white; }
-    /*--the on switch in upper right corner--*/
-#on { position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; background: linear-gradient(lime, green); border-radius: 16px; border: 1px solid #000; }
-
 
 body {
  background-image: url("giphy.gif");
  background-color: #cccccc;
 }
 
+input {
+  position: relative;
+  background-color: #00FF00;
+  border: none;
+  font-size: 15px;
+  color: #FFFFFF;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+input:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+input:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+input:hover {background-color: #f44336}
+
+
+#display{
+  padding: 15px;
+  width: 620px;
+  color: #FF0000;
+
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+td {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+td:hover {background-color: #3e8e41}
+
+td:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*button {
+  border: 0;
+  background: rgba(42,50,113, .28);
+  color: #6cacc5;
+  cursor: pointer;
+  float: left;
+  font: inherit;
+  margin: 0.25em;
+  width: 2em;
+  height: 2em;
+  transition: all 0.5s;
+
+  &:hover {
+    background: #201e40;
+  }
+  td {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
